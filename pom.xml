@@ -20,7 +20,7 @@ limitations under the License.
 
   <groupId>com.hackerrank.archetypes</groupId>
   <artifactId>springboot-rest-api</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>maven-archetype</packaging>
 
   <name>SpringBoot REST API Archetype</name>
