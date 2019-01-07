@@ -1,0 +1,23 @@
+exists(path) {
+    file = new java.io.File(basedir, path);
+
+    if (!file.exists()) {
+        throw new java.io.FileNotFoundException("Could not find " + file);
+    }
+
+    return true;
+}
+
+pom = "project/sample-build/pom.xml";
+
+runner = "project/sample-build/src/main/java/com/hackerrank/builds/Application.java";
+controller = "project/sample-build/src/main/java/com/hackerrank/builds/"
+    + "controllers/GreetingsController.java";
+
+properties = "project/sample-build/src/main/resources/application.properties";
+
+controller_test = "project/sample-build/src/test/java/com/hackerrank/builds/"
+    + "requests/GreetingsControllerTest.java";
+
+exists(pom) && exists(runner) && exists(controller) && exists(properties) &&
+    exists(controller_test)
