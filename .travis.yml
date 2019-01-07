@@ -14,7 +14,7 @@ script: mvn -B -V verify -DskipIntegrationTests=false
 
 after_success:
   - deploy/deploy.sh
-  - deploy/release.sh
+  - source deploy/release.sh
 
 cache:
   directories:
@@ -39,4 +39,4 @@ deploy:
     - target/springboot-rest-api-${PROJECT_VERSION}-sources.jar
   skip_cleanup: true
   on:
-    condition: $GITHUB_RELEASE = true
+    condition: "${GITHUB_RELEASE} = true"
